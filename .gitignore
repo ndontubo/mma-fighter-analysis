@@ -1,0 +1,19 @@
+# Python environment
+venv/
+__pycache__/
+*.pyc
+
+# Dataset — large + CC BY-NC-SA, do not redistribute
+mma-fighter-pose-estimation-dataset/
+*.jpg
+*.png
+
+# Model weights & training runs — large binaries, keep on Drive
+runs/
+*.pt
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
