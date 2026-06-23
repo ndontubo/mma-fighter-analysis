@@ -1,0 +1,16 @@
+import cv2
+from pathlib import Path
+
+clip = "clips/whittaker_adesanya_seg1.mp4"
+out = Path("frames/seg1"); out.mkdir(parents=True, exist_ok=True)
+
+cap = cv2.VideoCapture(clip)
+i = 0
+while True:
+    ok, frame = cap.read()
+    if not ok:
+        break
+    cv2.imwrite(str(out / f"{i:06d}.png"), frame)  # zero-padded
+    i += 1
+cap.release()
+print(f"extracted {i} frames")
